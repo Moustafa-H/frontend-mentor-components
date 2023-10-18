@@ -1,95 +1,45 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './home.module.css'
 
-export default function Home() {
+ const Home = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+    <main className={ styles.main }>
+      <div className={ styles.card }>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src='/product-preview-card/image-product-desktop.jpg'
+          alt='product image'
+          width={300}
+          height={450}
+          className={ styles.imageDesktop }
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <Image
+          src='/product-preview-card/image-product-desktop.jpg'
+          alt='product image'
+          width={343}
+          height={240}
+          className={ styles.imageMobile }
+        />
+        <section className={ styles.section }>
+          <p className={ styles.p1 }>Perfume</p>
+          <h2 className={ styles.title }>Gabrielle Essence Eau De Parfum</h2>
+          <p className={ styles.description }>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+          <div className={ styles.priceDiv }>
+            <h1 className={ styles.newPrice }>$149.99</h1>
+            <p className={ styles.oldPrice }>$169.99</p>
+          </div>
+          <button className={ styles.button }>
+            <Image
+              src='/product-preview-card/icon-cart.svg'
+              alt=''
+              width={15}
+              height={16}
+            />
+            Add to Cart
+          </button>
+        </section>
       </div>
     </main>
   )
 }
+
+export default Home
