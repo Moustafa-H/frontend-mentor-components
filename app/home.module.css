@@ -1,127 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat&display=swap');
-
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   user-select: none;
+  gap: 2rem;
 }
 
-.card {
-  display: flex;
-  width: 600px;
-  height: 450px;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 10px;
-  transition: 200ms;
-  min-width: 345px;
-  min-height: 450px;
+.h1 {
+  font-size: 38px;
+  text-decoration: underline;
+  text-decoration-color: hsl(10, 80%, 45%);
+  text-decoration-thickness: 2px;
 }
 
-.imageDesktop {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+.ul {
+  font-size: 24px;
 }
 
-.imageMobile {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  opacity: 0;
-  position: absolute;
+.li {
+  margin-bottom: 1rem;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem;
-  overflow: hidden;
-  height: 100%;
+.li:hover {
+  color: hsl(10, 80%, 45%);
 }
 
-.p1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-}
-
-.title {
-  font-family: 'Fraunces', serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: black;
-  line-height: 1em;
-}
-
-.description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: black;
-  line-height: 1.75em;
-}
-
-.priceDiv {
-  color: black;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.newPrice {
-  font-family: 'Fraunces', serif;
-  font-size: 34px;
-  font-weight: 700;
-  color: hsl(158, 36%, 37%);
-}
-
-.oldPrice {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: line-through;
-}
-
-.button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  width: 100%;
-  height: auto;
-  color: white;
-  background-color: hsl(158, 36%, 37%);
-  padding: 1rem;
-  border: none;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  transition: 100ms;
-}
-
-.button:hover {
-  background-color: hsl(158, 36%, 17%);
-}
-
-@media (width <= 620px) {
-  .card {
-    flex-direction: column;
-    width: 343px;
-    height: 90vh;
-  }
-
-  .imageDesktop {
-    opacity: 0;
-    position: absolute;
-  }
-  
-  .imageMobile {
-    opacity: 1;
-    position: static;
-    width: 100%;
-  }
+.li:active {
+  color: hsl(10, 80%, 25%);
 }

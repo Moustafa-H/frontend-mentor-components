@@ -1,43 +1,13 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import styles from './home.module.css'
 
  const Home = () => {
   return (
     <main className={ styles.main }>
-      <div className={ styles.card }>
-        <Image
-          src='/product-preview-card/image-product-desktop.jpg'
-          alt='product image'
-          width={300}
-          height={450}
-          className={ styles.imageDesktop }
-        />
-        <Image
-          src='/product-preview-card/image-product-desktop.jpg'
-          alt='product image'
-          width={343}
-          height={240}
-          className={ styles.imageMobile }
-        />
-        <section className={ styles.section }>
-          <p className={ styles.p1 }>Perfume</p>
-          <h2 className={ styles.title }>Gabrielle Essence Eau De Parfum</h2>
-          <p className={ styles.description }>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-          <div className={ styles.priceDiv }>
-            <h1 className={ styles.newPrice }>$149.99</h1>
-            <p className={ styles.oldPrice }>$169.99</p>
-          </div>
-          <button className={ styles.button }>
-            <Image
-              src='/product-preview-card/icon-cart.svg'
-              alt=''
-              width={15}
-              height={16}
-            />
-            Add to Cart
-          </button>
-        </section>
-      </div>
+      <h1 className={ styles.h1 }>Available routes:</h1>
+      <ul className={ styles.ul }>
+        <li className={ styles.li }><Link href='/product-preview-card'>Product Preview Card Component</Link></li>
+      </ul>
     </main>
   )
 }
