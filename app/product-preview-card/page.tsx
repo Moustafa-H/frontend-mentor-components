@@ -13,14 +13,14 @@ export const metadata: Metadata = {
         <HomeButton />
         <div className={ styles.card }>
             <Image
-                src='./product-preview-card/image-product-desktop.jpg'
+                src='/product-preview-card/image-product-desktop.jpg'
                 alt='product image'
                 width={300}
                 height={450}
                 className={ styles.imageDesktop }
             />
             <Image
-                src='./product-preview-card/image-product-desktop.jpg'
+                src='/product-preview-card/image-product-desktop.jpg'
                 alt='product image'
                 width={343}
                 height={240}
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
                 </div>
                 <button className={ styles.button }>
                     <Image
-                        src='./product-preview-card/icon-cart.svg'
+                        src='/product-preview-card/icon-cart.svg'
                         alt=''
                         width={15}
                         height={16}

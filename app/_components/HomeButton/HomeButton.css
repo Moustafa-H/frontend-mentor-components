@@ -10,12 +10,6 @@
     left: 0.25rem;
 }
 
-.home:active {
-    zoom: 100%;
-    top: 1.5rem;
-    left: 1rem;
-}
-
 @media (width <= 600px) {
     .home {
         top: 0;
