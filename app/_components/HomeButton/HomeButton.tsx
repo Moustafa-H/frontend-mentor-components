@@ -6,7 +6,7 @@ const HomeButton = () => {
   return (
     <Link href='/' className="home">
         <Image
-            src='/home-button.png'
+            src='./home-button.png'
             alt='Home'
             width={47}
             height={47}
