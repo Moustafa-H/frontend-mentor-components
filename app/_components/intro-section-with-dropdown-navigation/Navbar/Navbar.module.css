@@ -74,3 +74,49 @@
     color: hsl(0, 0%, 60%);
     border-color: hsl(0, 0%, 60%);
 }
+
+.menuButton {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (769px <= width <= 1024px) {
+    .header {
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .ul {
+        gap: 1.5rem;
+    }
+
+    .buttonDiv {
+        gap: 1rem;
+    }
+}
+
+@media (width <= 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .ul {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .buttonDiv {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .menuButton {
+        opacity: 1;
+        pointer-events: all;
+    }
+}

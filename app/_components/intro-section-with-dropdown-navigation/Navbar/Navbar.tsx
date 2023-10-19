@@ -23,6 +23,14 @@ const Navbar = () => {
           <Link href='/intro-section-with-dropdown-navigation'><button className={ styles.button }>Login</button></Link>
           <Link href='/intro-section-with-dropdown-navigation'><button className={ `${styles.button} ${styles.buttonBorder}` }>Register</button></Link>
         </div>
+        <button className={ styles.menuButton }>
+          <Image
+            src='./intro-section-with-dropdown-navigation/icon-menu.svg'
+            alt='menu'
+            width={32}
+            height={18}
+          />
+        </button>
     </header>
   )
 }

@@ -1,9 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
-/* font-family: 'Epilogue', sans-serif; */
-
 .main {
+    font-family: 'Epilogue', sans-serif;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-color: hsl(0, 0%, 98%);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    width: 100%;
+    padding: 5rem;
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    padding-top: 5rem;
+}
+
+.ctaTitle {
+    font-size: 76px;
+    font-weight: 700;
+    color: hsl(0, 0%, 8%);
+}
+
+.ctaParagraph {
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    width: 30rem;
+    line-height: 1.5rem;
+}
+
+.ctaButton {
+    border: 1.5px solid hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 8%);
+    font-size: 18px;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 98%);
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.ctaButton:hover {
+    background-color: rgb(90, 90, 90);
+}
+
+.ctaButton:active {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+}
+
+.sponsors {
+    display: flex;
+    gap: 2rem;
+}
+
+.heroDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroMobile {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (1025px <= width <= 1200px) {
+    .section {
+        padding: 2rem;
+        gap: 2rem;
+    }
+}
+
+@media (769px <= width <= 1024px) {
+    .section {
+        padding: 0 2rem;
+        gap: 1rem;
+    }
+
+    .textDiv {
+        gap: 2rem;
+    }
+
+    .ctaTitle {
+        font-size: 46px;
+    }
+
+    .ctaParagraph {
+        font-size: 16px;
+        width: 20rem;
+    }
+
+    .sponsors {
+        gap: 1rem;
+    }
+
+    .heroDesktop {
+        width: calc(960px/3);
+        height: auto;
+    }
+}
+
+@media (width <= 768px) {
+    .section {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    
+    .textDiv {
+        order: 2;
+        align-items: center;
+        padding: 3rem 1rem;
+        gap: 1.5rem;
+        height: 60vh;
+    }
+
+    .ctaTitle {
+        font-size: 36px;
+    }
+
+    .ctaParagraph {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .sponsors {
+        padding-top: 2rem;
+        gap: 0rem;
+    }
+
+    .heroDiv {
+        order: 1;
+    }
+
+    .heroDesktop {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .heroMobile {
+        opacity: 1;
+        position: static;
+    }
 }
