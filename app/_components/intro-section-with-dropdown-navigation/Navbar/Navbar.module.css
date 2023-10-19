@@ -1,0 +1,76 @@
+.header {
+    position: relative;
+    height: 80px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 4rem;
+}
+
+.logoImg {
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.a:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 700;
+}
+
+.a:active {
+    color: hsl(0, 0%, 60%);
+}
+
+.buttonDiv {
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.buttonBorder {
+    border: 1.5px solid hsl(0, 0%, 41%);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+
+.button:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 700;
+    border-color: hsl(0, 0%, 8%);
+}
+
+.button:active {
+    color: hsl(0, 0%, 60%);
+    border-color: hsl(0, 0%, 60%);
+}
