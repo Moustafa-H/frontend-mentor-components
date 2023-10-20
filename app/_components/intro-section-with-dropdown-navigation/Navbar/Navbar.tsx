@@ -13,7 +13,7 @@ const Navbar = () => {
             height={27}
             className={ styles.logoImg }
         /></Link>
-        <NavbarItems />
+        <NavbarItems style='navbar' />
     </header>
   )
 }
