@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import styles from './Sidebar.module.css'
 import { useEffect, useRef, useState } from 'react'
-import NavbarItems from '../NavbarItems/NavbarItems'
 
 const Sidebar = ({children}: {children: React.ReactNode}) => {
     const [isOpen, setIsOpen] = useState(false)

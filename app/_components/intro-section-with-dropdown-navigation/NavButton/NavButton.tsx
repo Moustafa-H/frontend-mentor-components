@@ -14,7 +14,7 @@ const NavButton = ({ text, style } : { text: string, style: Style }) => {
 
     useEffect(() => {
         const handleOutSideClick = (event: MouseEvent) => {
-            if (isOpen && !menuRef.current?.contains(event.target as Node)) {
+            if (style==='navbar' && isOpen && !menuRef.current?.contains(event.target as Node)) {
                 setIsOpen(false)
             }
         };
@@ -31,7 +31,11 @@ const NavButton = ({ text, style } : { text: string, style: Style }) => {
     }
 
     let featuresMenu =
-    <ul className={ isOpen?`${styles.menu} ${styles.pushLeft} ${styles.active}`:`${styles.menu} ${styles.pushLeft}` }>
+    <ul className={
+        style==='navbar'?
+        isOpen?`${styles.menu} ${styles.pushLeft} ${styles.active}`:`${styles.menu} ${styles.pushLeft}`
+        :isOpen?`${styles.menuSide} ${styles.activeSide}`:`${styles.menuSide}`
+    }>
         <li className={ styles.menuItem }>
             <Image
                 src='./intro-section-with-dropdown-navigation/icon-todo.svg'
@@ -71,7 +75,11 @@ const NavButton = ({ text, style } : { text: string, style: Style }) => {
     </ul>
 
     let companyMenu =
-    <ul className={ isOpen?`${styles.menu} ${styles.active}`:`${styles.menu}` }>
+    <ul className={
+        style==='navbar'?
+        isOpen?`${styles.menu} ${styles.pushLeft} ${styles.active}`:`${styles.menu} ${styles.pushLeft}`
+        :isOpen?`${styles.menuSide} ${styles.activeSide}`:`${styles.menuSide}`
+    }>
         <li className={ styles.menuItem }><Link href='/intro-section-with-dropdown-navigation'>History</Link></li>
         <li className={ styles.menuItem }><Link href='/intro-section-with-dropdown-navigation'>Our&nbsp;Team</Link></li>
         <li className={ styles.menuItem }><Link href='/intro-section-with-dropdown-navigation'>Blog</Link></li>

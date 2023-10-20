@@ -55,12 +55,6 @@
     transform: translateX(0);
 }
 
-.hidden {
-    pointer-events: none;
-    opacity: 0;
-    transform: translateX(60vw);
-}
-
 @media (width > 768px) {
     .show {
         opacity: 0;
