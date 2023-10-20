@@ -2,7 +2,7 @@ import styles from './NavbarItems.module.css'
 import Link from 'next/link'
 import NavButton from '../NavButton/NavButton'
 
-const NavbarItems = () => {
+const NavbarItems = ({style}: {style: string}) => {
   return (
     <>
         <ul className={ styles.ul }>

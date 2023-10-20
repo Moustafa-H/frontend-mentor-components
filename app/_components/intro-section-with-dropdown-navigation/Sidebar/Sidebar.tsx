@@ -5,6 +5,7 @@ import styles from './Sidebar.module.css'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import NavButton from '../NavButton/NavButton'
+import NavbarItems from '../NavbarItems/NavbarItems'
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -48,7 +49,9 @@ const Sidebar = () => {
                     className={ isOpen?styles.show:styles.hide }
                 />
             </button>
-            <div className={ isOpen?`${styles.sidebar} ${styles.active}`:`${styles.sidebar}` }></div>
+            <div className={ isOpen?`${styles.sidebar} ${styles.active}`:`${styles.sidebar}` }>
+                <NavbarItems style='sidebar' />
+            </div>
         </section>
         <div className={ isOpen?`${styles.darkBg} ${styles.active}`:`${styles.darkBg}` }></div>
         </>
