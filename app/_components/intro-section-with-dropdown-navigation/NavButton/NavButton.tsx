@@ -5,7 +5,9 @@ import styles from './NavButton.module.css'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 
-const NavButton = ({ text } : { text: string }) => {
+type Style = 'navbar' | 'sidebar'
+
+const NavButton = ({ text, style } : { text: string, style: Style }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     let menuRef: React.RefObject<HTMLDivElement> = useRef(null)

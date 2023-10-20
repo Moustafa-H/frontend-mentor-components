@@ -3,11 +3,9 @@
 import Image from 'next/image'
 import styles from './Sidebar.module.css'
 import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
-import NavButton from '../NavButton/NavButton'
 import NavbarItems from '../NavbarItems/NavbarItems'
 
-const Sidebar = () => {
+const Sidebar = ({children}: {children: React.ReactNode}) => {
     const [isOpen, setIsOpen] = useState(false)
 
     let menuRef: React.RefObject<HTMLDivElement> = useRef(null)
@@ -50,7 +48,7 @@ const Sidebar = () => {
                 />
             </button>
             <div className={ isOpen?`${styles.sidebar} ${styles.active}`:`${styles.sidebar}` }>
-                <NavbarItems style='sidebar' />
+                {children}
             </div>
         </section>
         <div className={ isOpen?`${styles.darkBg} ${styles.active}`:`${styles.darkBg}` }></div>
