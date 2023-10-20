@@ -2,9 +2,9 @@
 
 .main {
     font-family: 'Epilogue', sans-serif;
-    width: 100%;
-    height: auto;
+    width: 100vw;
     min-height: 100vh;
+    position: relative;
     background-color: hsl(0, 0%, 98%);
 }
 
@@ -73,9 +73,8 @@
 
 .heroMobile {
     opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 0;
+    height: 0;
 }
 
 @media (1025px <= width <= 1200px) {
@@ -155,6 +154,7 @@
     }
     .heroMobile {
         opacity: 1;
-        position: static;
+        width: calc(750px/2);
+        height: calc(564px/2);
     }
 }

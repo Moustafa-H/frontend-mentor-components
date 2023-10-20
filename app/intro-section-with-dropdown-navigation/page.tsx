@@ -4,6 +4,7 @@ import HomeButton from '../_components/HomeButton/HomeButton'
 import type { Metadata } from 'next'
 import Navbar from '../_components/intro-section-with-dropdown-navigation/Navbar/Navbar'
 import Link from 'next/link'
+import Sidebar from '../_components/intro-section-with-dropdown-navigation/Sidebar/Sidebar'
 
 export const metadata: Metadata = {
     title: 'Intro Section With Dropdown Navigation',
@@ -14,6 +15,7 @@ const IntroSectionWithDropdownNavigation = () => {
     <main className={ styles.main }>
         <HomeButton />
         <Navbar />
+        <Sidebar />
         <section className={ styles.section }>
           <div className={ styles.textDiv }>
             <h1 className={ styles.ctaTitle }>Make remote work</h1>

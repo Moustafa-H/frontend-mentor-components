@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './Navbar.module.css'
 import Link from 'next/link'
-import NavButton from '../NavButton/NavButton'
+import NavbarItems from '../NavbarItems/NavbarItems'
 
 const Navbar = () => {
   return (
@@ -13,24 +13,7 @@ const Navbar = () => {
             height={27}
             className={ styles.logoImg }
         /></Link>
-        <ul className={ styles.ul }>
-            <li><NavButton text='Features' /></li>
-            <li><NavButton text='Company' /></li>
-            <li><Link href='/intro-section-with-dropdown-navigation' className={ styles.a }>Careers</Link></li>
-            <li><Link href='/intro-section-with-dropdown-navigation' className={ styles.a }>About</Link></li>
-        </ul>
-        <div className={ styles.buttonDiv }>
-          <Link href='/intro-section-with-dropdown-navigation'><button className={ styles.button }>Login</button></Link>
-          <Link href='/intro-section-with-dropdown-navigation'><button className={ `${styles.button} ${styles.buttonBorder}` }>Register</button></Link>
-        </div>
-        <button className={ styles.menuButton }>
-          <Image
-            src='./intro-section-with-dropdown-navigation/icon-menu.svg'
-            alt='menu'
-            width={32}
-            height={18}
-          />
-        </button>
+        <NavbarItems />
     </header>
   )
 }
