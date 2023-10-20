@@ -26,7 +26,7 @@
 
 .sidebar {
     width: 60vw;
-    height: 100vh;
+    height: 100%;
     background-color: white;
     position: absolute;
     top: 0;
@@ -40,7 +40,7 @@
 
 .darkBg {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 0;
