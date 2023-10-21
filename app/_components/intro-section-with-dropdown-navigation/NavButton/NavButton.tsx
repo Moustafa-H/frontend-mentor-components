@@ -77,7 +77,7 @@ const NavButton = ({ text, style } : { text: string, style: Style }) => {
     let companyMenu =
     <ul className={
         style==='navbar'?
-        isOpen?`${styles.menu} ${styles.pushLeft} ${styles.active}`:`${styles.menu} ${styles.pushLeft}`
+        isOpen?`${styles.menu} ${styles.active}`:`${styles.menu}`
         :isOpen?`${styles.menuSide} ${styles.activeSide}`:`${styles.menuSide}`
     }>
         <li className={ styles.menuItem }><Link href='/intro-section-with-dropdown-navigation'>History</Link></li>
