@@ -20,15 +20,22 @@
     border-radius: 15px;
     font-family: 'Outfit', sans-serif;
     text-align: center;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
 }
 
 .image {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .h1 {
     color: hsl(218, 44%, 22%);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     padding: 0 2rem;
 }
