@@ -3,18 +3,33 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1.25rem 1.5rem;
+    cursor: grab;
+    max-height: 65px;
 }
 
 .check {
-    width: 25px;
-    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     border-radius: 50%;
     background: none;
     border: 1px solid hsl(233, 11%, 84%);
+    cursor: pointer;
 }
 
-.li:hover .check {
+.checked {
+    min-width: 25px;
+    min-height: 25px;
+    border-radius: 50%;
+    border-radius: 50%;
+    background: none;
+    border: double 1px transparent;
+    cursor: pointer;
+    background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-clip: content-box, border-box;
+}
+
+.div:hover .check {
     border: double 1px transparent;
     border-radius: 50%;
     background-image:
@@ -28,4 +43,38 @@
 .p {
     font-size: 18px;
     color: hsl(235, 19%, 35%);
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+.p::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.p::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.p::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.p::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.checkedP {
+    color: hsl(233, 11%, 84%);
+    text-decoration: line-through;
+}
+
+.remove {
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.div:hover .remove {
+    opacity: 1;
 }
