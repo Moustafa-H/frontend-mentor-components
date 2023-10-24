@@ -8,11 +8,12 @@ const QRCode = () => {
             <Image
                 src='./qr-code/image-qr-code.png'
                 alt='QR Code'
-                width={576/2}
-                height={576/2}
+                width={310}
+                height={310}
+                className={ styles.image }
             />
-            <h1 className={ styles.h1 }></h1>
-            <p className={ styles.p }></p>
+            <h1 className={ styles.h1 }>Improve your front-end skills by bulding projects</h1>
+            <p className={ styles.p }>scan the QR code to visit frontend mentor and take your coding skills to the next level</p>
         </div>
     </main>
   )
