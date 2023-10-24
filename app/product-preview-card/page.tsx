@@ -20,7 +20,7 @@ export const metadata: Metadata = {
                 className={ styles.imageDesktop }
             />
             <Image
-                src='./product-preview-card/image-product-desktop.jpg'
+                src='./product-preview-card/image-product-mobile.jpg'
                 alt='product image'
                 width={343}
                 height={240}
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
                 <h2 className={ styles.title }>Gabrielle Essence Eau De Parfum</h2>
                 <p className={ styles.description }>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
                 <div className={ styles.priceDiv }>
-                <h1 className={ styles.newPrice }>$149.99</h1>
-                <p className={ styles.oldPrice }>$169.99</p>
+                    <h1 className={ styles.newPrice }>$149.99</h1>
+                    <p className={ styles.oldPrice }>$169.99</p>
                 </div>
                 <button className={ styles.button }>
                     <Image
