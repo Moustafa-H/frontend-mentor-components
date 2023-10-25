@@ -1,3 +1,25 @@
+:root {
+  --TodoApp-main-bgColor: hsl(0, 0%, 98%);
+  --TodoApp-container-bgColor: white;
+  --TodoApp-borderColor: hsl(236, 33%, 92%);
+  --TodoApp-mainText-color: hsl(235, 19%, 35%);
+  --TodoApp-bottomItem-color: hsl(236, 9%, 61%);
+  --TodoApp-actionButton-activeColor: hsl(235, 19%, 35%);
+  --TodoApp-checkedP-color: hsl(233, 11%, 84%);
+  --TodoApp-placeholder-color: hsl(236, 9%, 61%);
+}
+
+[TodoApp-darkMode='true'] {
+  --TodoApp-main-bgColor: hsl(235, 21%, 11%);
+  --TodoApp-container-bgColor: hsl(235, 24%, 19%);
+  --TodoApp-borderColor: hsl(237, 14%, 26%);
+  --TodoApp-mainText-color: hsl(234, 39%, 85%);
+  --TodoApp-bottomItem-color: hsl(234, 11%, 52%);
+  --TodoApp-actionButton-activeColor: hsl(236, 33%, 92%);
+  --TodoApp-checkedP-color: hsl(233, 14%, 35%);
+  --TodoApp-placeholder-color: hsl(234, 11%, 52%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

@@ -32,8 +32,12 @@ const TodoApp = () => {
   }, [])
 
   useEffect(() => {
-    // if (todos.length !== Cookies.get('todos')?.length)
-      Cookies.set('todos', JSON.stringify(todos))
+    const htmlElement = document.documentElement
+    htmlElement.setAttribute('TodoApp-darkMode', String(darkMode))
+  }, [darkMode])
+
+  useEffect(() => {
+    Cookies.set('todos', JSON.stringify(todos))
   }, [todos])
 
   const handleModeClick = () => {
@@ -98,7 +102,7 @@ const TodoApp = () => {
   }
 
   return (
-    <main className={ darkMode?styles.mainDark:styles.main }>
+    <main className={ styles.main }>
       <Image
         src={ darkMode?'./todo-app/bg-desktop-dark.jpg':'./todo-app/bg-desktop-light.jpg' }
         alt='background'

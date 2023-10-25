@@ -13,8 +13,9 @@
     min-height: 25px;
     border-radius: 50%;
     background: none;
-    border: 1px solid hsl(233, 11%, 84%);
+    border: 1px solid var(--TodoApp-borderColor);
     cursor: pointer;
+    transition: 200ms;
 }
 
 .checked {
@@ -33,7 +34,7 @@
     border: double 1px transparent;
     border-radius: 50%;
     background-image:
-        linear-gradient(white, white),
+        linear-gradient(var(--TodoApp-container-bgColor), var(--TodoApp-container-bgColor)),
         linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
     ;
     background-origin: border-box;
@@ -42,9 +43,10 @@
 
 .p {
     font-size: 18px;
-    color: hsl(235, 19%, 35%);
+    color: var(--TodoApp-mainText-color);
     flex-grow: 1;
     overflow-x: auto;
+    transition: 200ms;
 }
 
 .p::-webkit-scrollbar {
@@ -64,8 +66,9 @@
 }
 
 .checkedP {
-    color: hsl(233, 11%, 84%);
+    color: var(--TodoApp-checkedP-color);
     text-decoration: line-through;
+    transition: 200ms;
 }
 
 .remove {
