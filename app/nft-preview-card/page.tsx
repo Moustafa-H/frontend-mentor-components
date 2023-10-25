@@ -11,7 +11,8 @@ const NFTPreviewCard = () => {
             alt='pew pew'
             width={280}
             height={280}
-            className={ styles.pImage }   
+            className={ styles.pImage }
+            priority={true}
           />
         </div>
         <h1 className={ styles.h1 }>Equilibrium #3429</h1>
