@@ -47,7 +47,7 @@
     filter: sepia(100%) hue-rotate(150deg) saturate(500%) brightness(200%);
 }
 
-.pImageDiv::before {
+.pImageDiv:hover::before {
     content: '';
     background-image: url('/nft-preview-card/icon-view.svg');
     background-size: 48px;
