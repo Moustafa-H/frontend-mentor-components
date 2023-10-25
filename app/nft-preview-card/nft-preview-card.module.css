@@ -48,7 +48,7 @@
 
 .pImageDiv:hover::before {
     content: '';
-    background-image: url('/nft-preview-card/icon-view.svg');
+    background-image: url('./nft-preview-card/icon-view.svg');
     background-size: 48px;
     background-position: center;
     background-repeat: no-repeat;
