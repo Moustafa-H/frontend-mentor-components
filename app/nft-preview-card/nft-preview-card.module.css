@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 .main {
     display: flex;
     justify-content: center;
@@ -9,96 +10,125 @@
     position: relative;
     overflow: hidden;
     background-color: hsl(217, 54%, 11%);
-  }
+}
 
-  .div {
+.section {
+    font-family: 'Outfit', sans-serif;
     width: 330px;
-    height: 550px;
     background-color: hsl(216, 50%, 16%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Outfit', sans-serif;
-    gap: 1rem;
-  }
-
-  .h1 {
-    font-size: 22px;
-    align-self: flex-start;
-    padding: 0 2rem;
-  }
-
-  .h1:hover {
-    color: hsl(178, 100%, 50%);
-  }
-
-  .p {
-    font-size: 18px;
-    padding: 0 2rem;
-    color: hsl(215, 51%, 70%)
-  }
-
-  .infoDiv {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-  }
-
-  .pImage {
-    border-radius: 10px;
-  }
-
-  .viewImage {
-    opacity: 0;
-  }
-  .pImage:hover.viewImage {
-    opacity: 1;
-
-  }
-
-  .price {
-    text-align: left;
-    color: hsl(178, 100%, 50%);
-  }
-
-  .time {
-    color: hsl(215, 51%, 70%)
-  }
-
-  .line {
-    width: 80%;
-    border-color: hsl(215, 32%, 27%);
-  }
-
-  .c1 {
-    color: hsl(215, 51%, 70%);
-  }
-
-  .ay7aga {
-    color: white;
-  }
-
-  .ay7aga:hover {
-    color: hsl(178, 100%, 50%);
-  }
-
-  .bottomDiv {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: flex-end;
-    padding: 0 2rem;
-    align-self: flex-start;
+    gap: 1.5rem;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+    padding: 1rem;
 }
 
-.gay {
+.pImageDiv {
+    position: relative;
+}
+
+.pImage {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 50ms ease-in-out;
+}
+
+.pImageDiv:hover .pImage {
+    filter: sepia(100%) hue-rotate(150deg) saturate(500%) brightness(200%);
+}
+
+.pImageDiv:hover::before {
+    content: '';
+    background-image: url('/nft-preview-card/icon-view.svg');
+    background-size: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.h1 {
+    font-size: 22px;
+    padding: 0 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+}
+
+.h1:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.p {
+    font-size: 18px;
+    padding: 0 1rem;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.infoDiv {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
+}
+
+.price {
+    text-align: left;
+    color: hsl(178, 100%, 50%);
+}
+
+.time {
+    color: hsl(215, 51%, 70%)
+}
+
+.hr {
+    width: 90%;
+    border: none;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.bottomDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding: 0 1rem 1rem;
+    width: 100%;
+}
+
+.bottomText {
+    color: hsl(215, 51%, 70%);
+}
+
+.spanText {
+    color: white;
+    cursor: pointer;
+}
+
+.spanText:hover {
+    color: hsl(178, 100%, 50%);
 }
