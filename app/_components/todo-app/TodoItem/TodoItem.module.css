@@ -81,3 +81,19 @@
 .div:hover .remove {
     opacity: 1;
 }
+
+@media (width <= 768px) {
+    .check {
+        min-width: 22.5px;
+        min-height: 22.5px;
+    }
+
+    .checked {
+        min-width: 22.5px;
+        min-height: 22.5px;
+    }
+
+    .p {
+        font-size: 14px;
+    }
+}
