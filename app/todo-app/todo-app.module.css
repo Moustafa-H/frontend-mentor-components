@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 18.75rem;
 }
 
 .section {
@@ -28,7 +28,9 @@
     align-items: stretch;
     gap: 1.5rem;
     width: 37.5vw;
+    min-width: 540px;
     z-index: 1;
+    min-height: 80vh;
 }
 
 .topDiv {
@@ -44,6 +46,13 @@
     color: white;
     font-size: 36px;
     font-weight: 700;
+    text-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.2),
+        0 2px 2px hsl(0deg 0% 0% / 0.2),
+        0 4px 4px hsl(0deg 0% 0% / 0.2),
+        0 8px 8px hsl(0deg 0% 0% / 0.2),
+        0 16px 16px hsl(0deg 0% 0% / 0.2)
+    ;
 }
 
 .modeButton {

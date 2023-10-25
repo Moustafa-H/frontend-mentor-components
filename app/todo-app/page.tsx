@@ -25,6 +25,11 @@ const TodoApp = () => {
   }, [])
 
   useEffect(() => {
+    const darkModeCookie = Cookies.get('darkMode')
+    if (darkModeCookie !== undefined && darkModeCookie !== '') {
+      setDarkMode(JSON.parse(darkModeCookie))
+    }
+
     const todosCookie = Cookies.get('todos')
     if (todosCookie !== undefined && todosCookie !== '') {
       setTodos(JSON.parse(todosCookie))
@@ -34,6 +39,7 @@ const TodoApp = () => {
   useEffect(() => {
     const htmlElement = document.documentElement
     htmlElement.setAttribute('TodoApp-darkMode', String(darkMode))
+    Cookies.set('darkMode', JSON.stringify(darkMode))
   }, [darkMode])
 
   useEffect(() => {
