@@ -63,10 +63,10 @@
 
 .h1 {
     font-size: 22px;
-    padding: 0 1rem;
+    margin-left: 1rem;
     cursor: pointer;
-    width: 100%;
     font-weight: 600;
+    align-self: flex-start;
 }
 
 .h1:hover {
@@ -75,7 +75,7 @@
 
 .p {
     font-size: 18px;
-    padding: 0 1rem;
+    margin-left: 1rem;
     color: hsl(215, 51%, 70%);
     font-weight: 300;
 }

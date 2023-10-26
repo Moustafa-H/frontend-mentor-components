@@ -18,7 +18,7 @@ const NFTPreviewCard = () => {
             priority={true}
           />
         </div>
-        <Link href='/nft-preview-card'><h1 className={ styles.h1 }>Equilibrium #3429</h1></Link>
+        <h1 className={ styles.h1 }><Link href='/nft-preview-card'>Equilibrium #3429</Link></h1>
         <p className={ styles.p }>Our Equilibrium collection promotes blanace and calm.</p>
         <div className={ styles.infoContainer }>
           <div className={ styles.infoDiv }>
