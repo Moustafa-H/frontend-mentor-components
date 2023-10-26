@@ -7,6 +7,8 @@
   --TodoApp-actionButton-activeColor: hsl(235, 19%, 35%);
   --TodoApp-checkedP-color: hsl(233, 11%, 84%);
   --TodoApp-placeholder-color: hsl(236, 9%, 61%);
+
+  --RoomHomepage-scrollButtonSize: 80px;
 }
 
 [TodoApp-darkMode='true'] {

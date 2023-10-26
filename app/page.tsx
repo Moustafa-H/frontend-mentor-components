@@ -11,6 +11,7 @@ import styles from './home.module.css'
         <li className={ styles.li }><Link href='/product-preview-card'>Product Preview Card Component</Link></li>
         <li className={ styles.li }><Link href='/intro-section-with-dropdown-navigation'>Intro Section With Dropdown Navigation</Link></li>
         <li className={ styles.li }><Link href='/todo-app'>Todo App</Link></li>
+        <li className={ styles.li }><Link href='/room-homepage'>Room Home Page</Link></li>
       </ul>
     </main>
   )

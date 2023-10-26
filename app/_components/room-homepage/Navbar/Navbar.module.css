@@ -1,0 +1,17 @@
+.header {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -0.1rem;
+}
