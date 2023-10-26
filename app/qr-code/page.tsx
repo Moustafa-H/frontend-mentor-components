@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import styles from './qr-code.module.css'
+import HomeButton from '../_components/HomeButton/HomeButton'
 
 const QRCode = () => {
   return (
     <main className={ styles.main }>
+      <HomeButton />
         <div className={ styles.div }>
             <Image
                 src='./qr-code/image-qr-code.png'

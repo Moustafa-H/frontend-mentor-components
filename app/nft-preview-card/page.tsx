@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import styles from './nft-preview-card.module.css'
+import HomeButton from '../_components/HomeButton/HomeButton'
 
 const NFTPreviewCard = () => {
   return (
     <main className={ styles.main }>
+      <HomeButton />
       <section className={ styles.section }>
         <div className={ styles.pImageDiv }>
           <Image

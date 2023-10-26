@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './room-homepage.module.css'
 import TopSection from '../_components/room-homepage/TopSection/TopSection'
 import Navbar from '../_components/room-homepage/Navbar/Navbar'
+import HomeButton from '../_components/HomeButton/HomeButton'
 
 const bottomSectionTitle = 'About our furniture'
 const bottomSectionText = 'Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive them that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.'
@@ -9,6 +10,7 @@ const bottomSectionText = 'Our multifunctional collection blends design and func
 const RoomHomepage = () => {
   return (
     <main className={ styles.main }>
+        <HomeButton />
         <Navbar />
         <TopSection />
         <section className={ styles.bottomSection }>

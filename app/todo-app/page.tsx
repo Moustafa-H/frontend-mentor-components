@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 import TodoItem from '../_components/todo-app/TodoItem/TodoItem'
 import { DragDropContext, Draggable, DropResult, Droppable } from '@hello-pangea/dnd'
 import Cookies from 'js-cookie'
+import HomeButton from '../_components/HomeButton/HomeButton'
 
 interface TodoDictionary {
   id: number,
@@ -109,6 +110,7 @@ const TodoApp = () => {
 
   return (
     <main className={ styles.main }>
+      <HomeButton />
       <Image
         src={ darkMode?'./todo-app/bg-desktop-dark.jpg':'./todo-app/bg-desktop-light.jpg' }
         alt='background'
