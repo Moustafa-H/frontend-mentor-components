@@ -12,10 +12,10 @@ const Navbar = () => {
             height={14}
         /></Link>
         <ul className={ styles.ul }>
-            <li><Link href='/room-homepage'>home</Link></li>
-            <li><Link href='/room-homepage'>shop</Link></li>
-            <li><Link href='/room-homepage'>about</Link></li>
-            <li><Link href='/room-homepage'>contact</Link></li>
+            <li className={ styles.li }><Link href='/room-homepage'>home</Link></li>
+            <li className={ styles.li }><Link href='/room-homepage'>shop</Link></li>
+            <li className={ styles.li }><Link href='/room-homepage'>about</Link></li>
+            <li className={ styles.li }><Link href='/room-homepage'>contact</Link></li>
         </ul>
     </header>
   )

@@ -15,3 +15,26 @@
     font-weight: 500;
     margin-top: -0.1rem;
 }
+
+.li:hover {
+    position: relative;
+}
+
+.li:hover::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    bottom: -0.75rem;
+    left: 20%;
+    display: block;
+}
+
+.li:active {
+    color: hsl(0, 0%, 0%);
+}
+
+.li:active::after {
+    background-color: black;
+}
