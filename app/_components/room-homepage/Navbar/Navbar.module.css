@@ -38,3 +38,7 @@
 .li:active::after {
     background-color: black;
 }
+
+@media (width <= 768px) {
+
+}

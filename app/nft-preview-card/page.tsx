@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './nft-preview-card.module.css'
 import HomeButton from '../_components/HomeButton/HomeButton'
+import Link from 'next/link'
 
 const NFTPreviewCard = () => {
   return (
@@ -17,7 +18,7 @@ const NFTPreviewCard = () => {
             priority={true}
           />
         </div>
-        <h1 className={ styles.h1 }>Equilibrium #3429</h1>
+        <Link href='/nft-preview-card'><h1 className={ styles.h1 }>Equilibrium #3429</h1></Link>
         <p className={ styles.p }>Our Equilibrium collection promotes blanace and calm.</p>
         <div className={ styles.infoContainer }>
           <div className={ styles.infoDiv }>
@@ -47,7 +48,7 @@ const NFTPreviewCard = () => {
             width={30}
             height={30}
           />
-          <p className={ styles.bottomText }>Creation of <span className={ styles.spanText }>Jules Wyvern</span></p>
+          <p className={ styles.bottomText }>Creation of <span className={ styles.spanText }><Link href='/nft-preview-card'>Jules Wyvern</Link></span></p>
         </div>
       </section>
     </main>

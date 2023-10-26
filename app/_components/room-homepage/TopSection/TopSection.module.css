@@ -86,6 +86,14 @@
     color: hsl(0, 0%, 63%)
 }
 
+@media (1025px <= width <= 1200px) {
+
+}
+
+@media (769px <= width <= 1024px) {
+
+}
+
 @media (width > 768px) {
     .mobileImage {
         opacity: 0;
