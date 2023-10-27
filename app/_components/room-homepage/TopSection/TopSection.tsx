@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import styles from './TopSection.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const titles = [
     'Discover innovative ways to decorate',
@@ -19,11 +20,14 @@ const texts = [
 const TopSection = () => {
     const [index, setIndex] = useState(1)
     const [imageDir, setImageDir] = useState('./room-homepage/desktop-image-hero-1.jpg')
+    const [mobileImageDir, setMobileImageDir] = useState('./room-homepage/mobile-image-hero-1.jpg')
     const [topSectionTitle, setTopSectionTitle] = useState(titles[0])
     const [topSectionText, setTopSectionText] = useState(texts[0])
+    const [mobileNav, setMobileNav] = useState(false)
 
     useEffect(() => {
         setImageDir('./room-homepage/desktop-image-hero-' + index + '.jpg')
+        setMobileImageDir('./room-homepage/mobile-image-hero-' + index + '.jpg')
         setTopSectionTitle(titles[index-1])
         setTopSectionText(texts[index-1])
     }, [index])
@@ -39,6 +43,10 @@ const TopSection = () => {
             setIndex(index - 1)
         }
     }
+
+    const handleMenuClick = () => {
+        setMobileNav(!mobileNav)
+    }
     
     return (
         <section className={ styles.topSection }>
@@ -51,7 +59,7 @@ const TopSection = () => {
                     className={ styles.desktopImage }
                 />
                 <Image
-                    src={'./room-homepage/mobile-image-hero-1.jpg'}
+                    src={mobileImageDir}
                     alt='hero 1'
                     width={375}
                     height={360}
@@ -90,6 +98,32 @@ const TopSection = () => {
                     />
                 </button>
             </div>
+            <button onClick={handleMenuClick} className={ mobileNav?`${styles.menuButton} ${styles.menuButtonActive}`:styles.menuButton }>
+                {mobileNav?
+                    <Image
+                        src='./room-homepage/icon-close.svg'
+                        alt='close menu'
+                        width={16}
+                        height={16}
+                    />
+                :
+                    <Image
+                        src='./room-homepage/icon-hamburger.svg'
+                        alt='menu'
+                        width={20}
+                        height={14}
+                    />
+                }
+            </button>
+            <div className={ mobileNav?`${styles.mobileNav} ${styles.active}`:styles.mobileNav }>
+                <ul className={ mobileNav?`${styles.mobileNavList} ${styles.active}`:styles.mobileNavList }>
+                    <li className={ styles.li }><Link href='/room-homepage'>home</Link></li>
+                    <li className={ styles.li }><Link href='/room-homepage'>shop</Link></li>
+                    <li className={ styles.li }><Link href='/room-homepage'>about</Link></li>
+                    <li className={ styles.li }><Link href='/room-homepage'>contact</Link></li>
+                </ul>
+            </div>
+            <div className={ mobileNav?`${styles.darkBg} ${styles.active}`:styles.darkBg }></div>
         </section>
     )
 }

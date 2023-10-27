@@ -19,7 +19,7 @@ const NFTPreviewCard = () => {
           />
         </div>
         <h1 className={ styles.h1 }><Link href='/nft-preview-card'>Equilibrium #3429</Link></h1>
-        <p className={ styles.p }>Our Equilibrium collection promotes blanace and calm.</p>
+        <p className={ styles.p }>Our Equilibrium collection promotes balance and calm.</p>
         <div className={ styles.infoContainer }>
           <div className={ styles.infoDiv }>
             <Image
