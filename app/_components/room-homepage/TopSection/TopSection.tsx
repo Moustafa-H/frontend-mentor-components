@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './TopSection.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,14 +20,12 @@ const texts = [
 const TopSection = () => {
     const [index, setIndex] = useState(1)
     const [imageDir, setImageDir] = useState('./room-homepage/desktop-image-hero-1.jpg')
-    const [mobileImageDir, setMobileImageDir] = useState('./room-homepage/mobile-image-hero-1.jpg')
     const [topSectionTitle, setTopSectionTitle] = useState(titles[0])
     const [topSectionText, setTopSectionText] = useState(texts[0])
     const [mobileNav, setMobileNav] = useState(false)
 
     useEffect(() => {
         setImageDir('./room-homepage/desktop-image-hero-' + index + '.jpg')
-        setMobileImageDir('./room-homepage/mobile-image-hero-' + index + '.jpg')
         setTopSectionTitle(titles[index-1])
         setTopSectionText(texts[index-1])
     }, [index])
@@ -58,12 +56,39 @@ const TopSection = () => {
                     height={534}
                     className={ styles.desktopImage }
                 />
+                
                 <Image
-                    src={mobileImageDir}
+                    src='./room-homepage/mobile-image-hero-1.jpg'
                     alt='hero 1'
                     width={375}
                     height={360}
-                    className={ styles.mobileImage }
+                    className={
+                        index===1?`${styles.mobileImage} ${styles.middleImage}`:
+                            index===2?`${styles.mobileImage} ${styles.leftImage}`:
+                                `${styles.mobileImage} ${styles.hideImageLeft}`
+                    }
+                />
+                <Image
+                    src='./room-homepage/mobile-image-hero-2.jpg'
+                    alt='hero 1'
+                    width={375}
+                    height={360}
+                    className={
+                        index===2?`${styles.mobileImage} ${styles.middleImage}`:
+                            index===1?`${styles.mobileImage} ${styles.rightImage}`:
+                                `${styles.mobileImage} ${styles.leftImage}`
+                    }
+                />
+                <Image
+                    src='./room-homepage/mobile-image-hero-3.jpg'
+                    alt='hero 1'
+                    width={375}
+                    height={360}
+                    className={
+                        index===3?`${styles.mobileImage} ${styles.middleImage}`:
+                            index===2?`${styles.mobileImage} ${styles.rightImage}`:
+                                `${styles.mobileImage} ${styles.hideImageRight}`
+                    }
                 />
                 <div className={ styles.buttonDiv }>
                     <button onClick={decrementIndex} className={ styles.button }>

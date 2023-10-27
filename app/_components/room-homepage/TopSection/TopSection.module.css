@@ -18,6 +18,40 @@
 .mobileImage {
     width: 100%;
     height: auto;
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.leftImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100vw);
+}
+
+.middleImage {
+    position: static;
+}
+
+.rightImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100vw);
+}
+
+.hideImageLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-200vw);
+}
+
+.hideImageRight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(200vw);
 }
 
 .buttonDiv {
@@ -93,6 +127,8 @@
     top: 2.75rem;
     left: 1.5rem;
     z-index: 3;
+    pointer-events: none;
+    opacity: 0;
 }
 
 .menuButtonActive {
@@ -124,7 +160,7 @@
     font-size: 16px;
     font-weight: 700;
     pointer-events: none;
-    transform: translateX(-100vw);
+    transform: translateX(100vw);
     transition: transform 200ms ease-in-out;
 }
 
@@ -235,5 +271,10 @@
 
     .ctaButton {
         margin-top: 1.5rem;
+    }
+
+    .menuButton {
+        pointer-events: all;
+        opacity: 1;
     }
 }
