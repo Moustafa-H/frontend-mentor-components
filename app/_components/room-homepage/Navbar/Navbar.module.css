@@ -5,6 +5,7 @@
     display: flex;
     align-items: flex-start;
     gap: 4rem;
+    z-index: 1;
 }
 
 .ul {
