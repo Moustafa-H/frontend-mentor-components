@@ -14,7 +14,7 @@ const Sidebar = ({children}: {children: React.ReactNode}) => {
             if (isOpen && !menuRef.current?.contains(event.target as Node)) {
                 setIsOpen(false)
             }
-        };
+        }
 
         window.addEventListener("mousedown", handleOutSideClick)
 

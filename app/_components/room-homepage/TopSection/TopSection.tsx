@@ -24,6 +24,22 @@ const TopSection = () => {
     const [topSectionText, setTopSectionText] = useState(texts[0])
     const [mobileNav, setMobileNav] = useState(false)
 
+    let mobileNavRef: React.RefObject<HTMLDivElement> = useRef(null)
+
+    useEffect(() => {
+        const handleOutSideClick = (event: MouseEvent) => {
+            if (mobileNav && !mobileNavRef.current?.contains(event.target as Node)) {
+                setMobileNav(false)
+            }
+        }
+
+        window.addEventListener("mousedown", handleOutSideClick)
+
+        return () => {
+            window.removeEventListener("mousedown", handleOutSideClick)
+        }
+    }, [mobileNavRef, mobileNav])
+    
     useEffect(() => {
         setImageDir('./room-homepage/desktop-image-hero-' + index + '.jpg')
         setTopSectionTitle(titles[index-1])
@@ -140,7 +156,7 @@ const TopSection = () => {
                     />
                 }
             </button>
-            <div className={ mobileNav?`${styles.mobileNav} ${styles.active}`:styles.mobileNav }>
+            <div ref={mobileNavRef} className={ mobileNav?`${styles.mobileNav} ${styles.active}`:styles.mobileNav }>
                 <ul className={ mobileNav?`${styles.mobileNavList} ${styles.active}`:styles.mobileNavList }>
                     <li className={ styles.li }><Link href='/room-homepage'>home</Link></li>
                     <li className={ styles.li }><Link href='/room-homepage'>shop</Link></li>
