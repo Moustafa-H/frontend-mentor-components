@@ -5,12 +5,12 @@ import './HomeButton.css'
 const HomeButton = () => {
   return (
     <Link href='/' className="home">
-        <Image
-            src='./home-button.png'
-            alt='Home'
-            width={47}
-            height={47}
-        />
+      <Image
+        src='./home-button.png'
+        alt='Home'
+        width={47}
+        height={47}
+      />
     </Link>
   )
 }

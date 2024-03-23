@@ -1,14 +1,13 @@
 .home {
-    position: absolute;
+    position: fixed;
     bottom: 1.5rem;
     left: 1rem;
     z-index: 9999;
+    transition: 50ms linear;
 }
 
 .home:hover {
-    zoom: 150%;
-    bottom: 0.75rem;
-    left: 0.25rem;
+    transform: scale(1.5);
 }
 
 @media (width <= 768px) {
